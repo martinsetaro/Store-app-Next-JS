@@ -1,0 +1,46 @@
+.container_button 
+{
+  width: 60%;
+  height: 4rem;
+  display: flex;
+  margin: 2rem auto;
+  padding-bottom: 3rem;
+  align-items: center;
+ 
+}
+.container_button select 
+{
+    margin-top: 1.5rem;
+}
+@media(max-width:768px){
+    .container_button
+    {
+        display: flex;
+        flex-direction: column;
+        height: 15rem;
+        width: 100%;
+    }
+    .container_button select 
+    {
+        margin-top: 1rem;
+    }
+}
+.btn_comprar 
+{
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7rem;
+    background-color: rgb(84, 2, 131,.9);
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: .6rem;
+}
+.imagen
+{
+    width: 2rem;
+    height: 2rem;
+}

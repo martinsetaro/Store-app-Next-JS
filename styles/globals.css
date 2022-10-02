@@ -26,3 +26,30 @@ a {
     background: black;
   }
 }
+.container_card 
+{
+  width: 15rem;
+  height: 16rem;
+  margin-left: -1rem;
+  margin-bottom: 4rem;
+  position: relative;
+  border-radius: .6rem;
+  
+
+
+}
+
+.container_price 
+{
+  width: 100%;
+  height: 16rem;
+  position: absolute;
+  border-radius: .6rem;
+  opacity: 0;
+}
+
+.container_price:hover 
+{
+  background-color: rgba(157, 195, 233, 0.2);
+  opacity: 1;
+}

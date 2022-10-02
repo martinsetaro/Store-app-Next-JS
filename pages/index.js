@@ -1,6 +1,12 @@
 import Layout from "../components/Layout"
 import productos from '../components/mockup/productos.json';
 import React , { useState , useEffect } from "react";
+import style from '../styles/home.module.css';
+import Image from "next/future/image";
+import dolar from '../public/img/dolar.png';
+import Monedas from "../components/monedas";
+
+
 
 
 export default function Home() {
@@ -76,13 +82,15 @@ const irMenor = () => {
     title="Welcome Store"
     description="Tienda de productos electronicos"
     >
+      <Monedas/>
+
    <div className="w-full h-auto pb-6 flex flex-col">
-    <h2 className="text-3xl uppercase text-center">Tienda de productos electronicos</h2>
-    <div className="flex justify-center gap-6 mt-5">
-      <button onClick={irMayor} className="bg-orange-600 text-white uppercase rounded-md p-2 active:bg-slate-400">Mayor a Menor</button>
-      <button onClick={irMenor} className="bg-orange-600 text-white uppercase rounded-md p-2 active:bg-slate-400">Menor a Mayor</button>
-      <button onClick={()=>{setProducto(productos)}} className="bg-orange-600 text-white uppercase rounded-md p-2 active:bg-slate-400">Todos</button>
-      <select onChange={elegirCategoria}>
+    <h2 className="text-3xl uppercase text-center mt-5">Tienda de productos electronicos</h2>
+    <div className={style.container_button}>
+    <button onClick={irMayor} className=" bg-orange-600 mb-2 w-1/2 m-auto text-white uppercase rounded-md p-2 active:bg-slate-400 lg:w-40 ">Mayor a Menor</button>
+      <button onClick={irMenor} className="bg-orange-600 mb-2 w-1/2 m-auto text-white uppercase rounded-md p-2 active:bg-slate-400 lg:w-40">Menor a Mayor</button>
+      <button onClick={()=>{setProducto(productos)}} className="bg-orange-600 mb-2 w-1/2 m-auto text-white uppercase rounded-md p-2 active:bg-slate-400 lg:w-24">Todos</button>
+      <select className="mt-28 border-2" onChange={elegirCategoria}>
         <option>Seleccione un producto</option>
         <option value="auriculares">Auriculares</option>
         <option value="tablet">Tablet's</option>
@@ -94,11 +102,20 @@ const irMenor = () => {
     <div className="w-3/4 flex flex-wrap h-auto justify-around m-auto mt-6">
       {producto.map( item => {
         return(
-          <div className="w-48 h-auto p-3 shadow-md rounded-md mb-8" key={item.id}>
+          <>
+            
+          <div className="container_card shadow-md" key={item.id}>
+            <div className="container_price flex justify-center ">
+            
+              <button className={style.btn_comprar}><Image src={dolar} alt="dolar" className={style.imagen}/>Comprar</button>
+              
+            </div>
              <h2 className="text-xl text-center mb-5">{item.nombre}</h2>
-             <img className="w-36 h-36" src={item.imagen} alt={item.nombre}/>
+             <img className="w-36 h-36 m-auto" src={item.imagen} alt={item.nombre}/>
              <h3 className="text-center">Precio : $ {item.precio}</h3>
           </div>
+          
+          </>
         )
       })}
 
