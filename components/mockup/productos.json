@@ -1,0 +1,130 @@
+[
+    {
+        "id":1,
+        "nombre":"Sony WH-CH510",
+        "categoria":"auriculares",
+        "precio":100,
+        "imagen":"https://http2.mlstatic.com/D_NQ_NP_2X_933418-MLA40865317836_022020-V.webp"
+
+    },
+    {
+        "id":2,
+        "nombre":"Stomberg Bluetooth",
+        "categoria":"auriculares",
+        "precio":100,
+        "imagen":"https://stromberg.com.ar/wp-content/uploads/2021/11/5.-Slag.jpg"
+
+    },
+    {
+        "id":3,
+        "nombre":"Philips TAH4205",
+        "categoria":"auriculares",
+        "precio":150,
+        "imagen":"https://images.fravega.com/f300/b714bd46139dda51719e918713620657.jpg.webp"
+
+    },
+    {
+        "id":4,
+        "nombre":"Motorola",
+        "categoria":"auriculares",
+        "precio":180,
+        "imagen":"https://tienda.claro.com.ar/wcsstore/Claro/images/catalog/productos/646x1000/7002969.jpg"
+
+    },
+    {
+        "id":5,
+        "nombre":"Samsung Tab A 10.1",
+        "categoria":"tablet",
+        "precio":300,
+        "imagen":"https://http2.mlstatic.com/D_NQ_NP_919804-MLA46792260104_072021-O.jpg"
+
+    },
+    {
+        "id":6,
+        "nombre":"Lenovo Yoga 11",
+        "categoria":"tablet",
+        "precio":300,
+        "imagen":"https://images.fravega.com/f300/2d479d2d0b8e524b8ff1672dbce83ae2.jpg.webp"
+
+    },
+    {
+        "id":7,
+        "nombre":"Lenovo 7 TABM7",
+        "categoria":"tablet",
+        "precio":300,
+        "imagen":"https://www.alex.com.py/uploads/foto-principal1140-1-1622056183.jpg"
+
+    },
+    {
+        "id":8,
+        "nombre":"Exo 7 Pulgadas 16Gb",
+        "categoria":"tablet",
+        "precio":300,
+        "imagen":"https://www.megatone.net/Images/Articulos/zoom2x/224/TAB7716EXO.jpg"
+
+    },
+     {
+        "id":9,
+        "nombre":"HP 245 G8",
+        "categoria":"notebook",
+        "precio":650,
+        "imagen":"https://www.computershopping.com.ar/Images/Productos/HP-161D8LT_Foto0.jpg"
+
+    },
+    {
+        "id":10,
+        "nombre":"HP ryzen 5 3500U",
+        "categoria":"notebook",
+        "precio":750,
+        "imagen":"https://s3.amazonaws.com/imagenes-sellers-mercado-ripley/2022/02/01153922/9967HP-245-G8.jpg"
+
+    },
+    {
+        "id":11,
+        "nombre":"HP Pavilion 15 pulgadas",
+        "categoria":"notebook",
+        "precio":850,
+        "imagen":"https://cdn.shopify.com/s/files/1/1161/3498/products/laptops-costa-rica-hp-pavilion-15_large.jpg?v=1652460005"
+
+    },
+    {
+        "id":12,
+        "nombre":"HP Pavilion R7-4700u",
+        "categoria":"notebook",
+        "precio":950,
+        "imagen":"https://siman.vtexassets.com/arquivos/ids/1216764/103237714_1.jpg?v=637520234658130000"
+
+    },
+    {
+        "id":13,
+        "nombre":"Pc oficina Celeron ",
+        "categoria":"pc",
+        "precio":1050,
+        "imagen":"https://http2.mlstatic.com/D_NQ_NP_692104-MLA50138294619_052022-W.jpg"
+
+    },
+    {
+        "id":14,
+        "nombre":"Pc Ryzen 3 3600x",
+        "categoria":"pc",
+        "precio":1150,
+        "imagen":"https://http2.mlstatic.com/D_NQ_NP_810684-MLA45826356518_052021-O.webp"
+
+    },
+    {
+        "id":15,
+        "nombre":"Pc Intel I3 8gb",
+        "categoria":"pc",
+        "precio":1350,
+        "imagen":"https://http2.mlstatic.com/D_NQ_NP_731226-MLA43594326308_092020-O.webp"
+
+    },
+    {
+        "id":16,
+        "nombre":"Pc Ryzen 7 5700g 16gb",
+        "categoria":"pc",
+        "precio":2350,
+        "imagen":"https://app.contabilium.com/files/explorer/16277/Productos-Servicios/concepto-6122639.jpg"
+
+    }
+]
