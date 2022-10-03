@@ -12,6 +12,7 @@ import Monedas from "../components/monedas";
 export default function Home() {
 
   const [producto,setProducto]= useState([]);
+  const [quitarMonedas,setQuitarMonedas] = useState('');
   
 
 
@@ -73,8 +74,16 @@ const irMenor = () => {
   
 }
 
+ const menosMonedas = (e)=>{
+     const min = e.target.parentElement.parentElement;
+     const menos = min.querySelector('.title_precio').textContent.replace('$','');
+     setQuitarMonedas(menos);
+ }
+
  
-  
+
+
+ 
 
 
   return (
@@ -82,7 +91,7 @@ const irMenor = () => {
     title="Welcome Store"
     description="Tienda de productos electronicos"
     >
-      <Monedas/>
+      <Monedas quitarMonedas={quitarMonedas}/>
 
    <div className="w-full h-auto pb-6 flex flex-col">
     <h2 className="text-3xl uppercase text-center mt-5">Tienda de productos electronicos</h2>
@@ -102,20 +111,20 @@ const irMenor = () => {
     <div className="w-3/4 flex flex-wrap h-auto justify-around m-auto mt-6">
       {producto.map( item => {
         return(
-          <>
+          <div key={item.id}>
             
           <div className="container_card shadow-md" key={item.id}>
             <div className="container_price flex justify-center ">
             
-              <button className={style.btn_comprar}><Image src={dolar} alt="dolar" className={style.imagen}/>Comprar</button>
+              <button onClick={menosMonedas} className={style.btn_comprar}><Image src={dolar} alt="dolar" className={style.imagen}/>Comprar</button>
               
             </div>
              <h2 className="text-xl text-center mb-5">{item.nombre}</h2>
              <img className="w-36 h-36 m-auto" src={item.imagen} alt={item.nombre}/>
-             <h3 className="text-center">Precio : $ {item.precio}</h3>
+             <h3 className="text-center">Precio : $<span className="title_precio">{item.precio}</span></h3>
           </div>
           
-          </>
+          </div>
         )
       })}
 
