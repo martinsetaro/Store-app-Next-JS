@@ -7,6 +7,7 @@ import dolar from '../public/img/dolar.png';
 import Monedas from "../components/monedas";
 import { useContext } from "react";
 import {contexto} from '../components/AppContext';
+import Swal from 'sweetalert2'
 
 
 
@@ -80,6 +81,12 @@ const irMenor = () => {
  const menosMonedas = (e)=>{
      const min = e.target.parentElement.parentElement;
      const menos = min.querySelector('.title_precio').textContent.replace('$','');
+     Swal.fire({
+      title:`Pagastes $${menos}`,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 1000
+    })
      descontarMonedas(menos);
  }
 

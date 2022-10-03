@@ -1,6 +1,8 @@
 import { createContext } from "react";
 import React,{useState} from "react";
 
+
+
 export const contexto = createContext();
 const {Provider} = contexto;
 
@@ -14,7 +16,8 @@ const descontarMonedas = (min) =>{
 }
 
 const sumarMonedas = (mas)=>{
-    setMonedas(mas + monedas)
+    setMonedas(mas + monedas);
+    
 }
 
     
