@@ -5,6 +5,8 @@ import style from '../styles/home.module.css';
 import Image from "next/future/image";
 import dolar from '../public/img/dolar.png';
 import Monedas from "../components/monedas";
+import { useContext } from "react";
+import {contexto} from '../components/AppContext';
 
 
 
@@ -14,6 +16,7 @@ export default function Home() {
   const [producto,setProducto]= useState([]);
   const [quitarMonedas,setQuitarMonedas] = useState('');
   
+  const{descontarMonedas} = useContext(contexto);
 
 
  
@@ -77,10 +80,10 @@ const irMenor = () => {
  const menosMonedas = (e)=>{
      const min = e.target.parentElement.parentElement;
      const menos = min.querySelector('.title_precio').textContent.replace('$','');
-     setQuitarMonedas(menos);
+     descontarMonedas(menos);
  }
 
- 
+
 
 
  
@@ -91,7 +94,7 @@ const irMenor = () => {
     title="Welcome Store"
     description="Tienda de productos electronicos"
     >
-      <Monedas quitarMonedas={quitarMonedas}/>
+      <Monedas/>
 
    <div className="w-full h-auto pb-6 flex flex-col">
     <h2 className="text-3xl uppercase text-center mt-5">Tienda de productos electronicos</h2>
