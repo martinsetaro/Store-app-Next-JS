@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import AppContext from '../components/AppContext';
+import AppContext from '../pages/AppContext.js';
 
 function MyApp({ Component, pageProps }) {
 
