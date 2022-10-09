@@ -2,7 +2,7 @@ import Layout from "../components/Layout"
 import productos from '../components/mockup/productos.json';
 import React , { useState , useEffect, useContext  } from "react";
 import style from '../styles/home.module.css';
-import Monedas from "../components/Monedas.js";
+import Monedas from "./Monedas.js";
 import {contexto} from '../components/AppContext';
 import Swal from 'sweetalert2';
 
