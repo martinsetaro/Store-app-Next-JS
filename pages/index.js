@@ -1,13 +1,12 @@
 import Layout from "../components/Layout"
 import productos from '../components/mockup/productos.json';
-import React , { useState , useEffect } from "react";
+import React , { useState , useEffect, useContext  } from "react";
 import style from '../styles/home.module.css';
-import Image from "next/future/image";
-import dolar from '../public/img/dolar.png';
-import Monedas from "../components/monedas";
-import { useContext } from "react";
+import Monedas from "../components/Monedas.js";
 import {contexto} from '../components/AppContext';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+
+
 
 
 
@@ -15,7 +14,7 @@ import Swal from 'sweetalert2'
 export default function Home() {
 
   const [producto,setProducto]= useState([]);
-  const [quitarMonedas,setQuitarMonedas] = useState('');
+  
   
   const{descontarMonedas} = useContext(contexto);
 
@@ -112,7 +111,7 @@ const irMenor = () => {
       <select className="mt-28 border-2" onChange={elegirCategoria}>
         <option>Seleccione un producto</option>
         <option value="auriculares">Auriculares</option>
-        <option value="tablet">Tablet's</option>
+        <option value="tablet">Tablets</option>
         <option value="notebook">Notebooks</option>
         <option value="pc">Pc of / gamer</option>
       </select>
@@ -126,7 +125,7 @@ const irMenor = () => {
           <div className="container_card shadow-md" key={item.id}>
             <div className="container_price flex justify-center ">
             
-              <button onClick={menosMonedas} className={style.btn_comprar}><Image src={dolar} alt="dolar" className={style.imagen}/>Comprar</button>
+              <button onClick={menosMonedas} className={style.btn_comprar}>Comprar</button>
               
             </div>
              <h2 className="text-xl text-center mb-5">{item.nombre}</h2>
