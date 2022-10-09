@@ -1,6 +1,6 @@
 
 import { useContext } from "react";
-import {contexto} from "./AppContext";
+import {contexto} from "../components/AppContext";
 
 import Swal from 'sweetalert2'
 
